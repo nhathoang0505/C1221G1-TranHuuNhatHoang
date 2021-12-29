@@ -1,7 +1,7 @@
 START
  INPUT 
      toan, ly, hoa
-     avg=(math+ly+hoa)/3
+     avg=(toan+ly+hoa)/3
  DISPLAY avg
 END
 

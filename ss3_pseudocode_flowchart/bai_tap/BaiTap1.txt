@@ -1,7 +1,6 @@
 START
- INPUT 
-     toan, ly, hoa
-     avg=(toan+ly+hoa)/3
+ INPUT toan, ly, hoa
+       avg=(toan+ly+hoa)/3
  DISPLAY avg
 END
 

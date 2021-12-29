@@ -1,0 +1,10 @@
+START 
+ i=So tu nhien
+ INPUT M
+ IF M==i
+ DISPLAY 'Dung'
+ ELSE 
+ DISPLAY 'Sai'
+ END IF
+END
+  

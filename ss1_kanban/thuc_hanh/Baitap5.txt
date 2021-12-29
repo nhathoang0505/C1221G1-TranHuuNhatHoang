@@ -1,0 +1,20 @@
+START
+  INPUT i=diem
+   IF diem>=75 
+    DISPLAY "loai A"
+   ELSE 
+    IF i>=60 
+     DISPLAY "loai B"
+    ELSE 
+     IF i>=45 
+      DISPLAY "loai C"
+     ELSE
+      IF i>=35 
+       DISPLAY "loai D"
+      ELSE
+       DISPLAY "loai E"
+      END IF
+     END IF
+    END IF
+   END IF 
+END

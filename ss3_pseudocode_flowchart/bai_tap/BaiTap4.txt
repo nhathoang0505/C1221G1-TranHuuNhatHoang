@@ -6,11 +6,11 @@ START
  WHILE (i<=N)
  DO
   IF ai>max
-     max=ai
+    max=ai
   END IF
-    i=i+1 
-  END DO
-  DISPLAY max 
+  i=i+1 
+ END DO
+ DISPLAY max 
 END 
    
   

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form action="">
+    <label for="num"><h4>Amount</h4></label>
+    <input type="number" name="num" id="num">
+    <br>
+    <label for="before"><h4>From Currency</h4></label>
+    <select name="currency" id="before">
+        <option value="vnd" name="currency">Vietnamdong</option>
+        <option value="usd" name="currency">DolaMy</option>
+    </select>
+    <br>
+    <label for="after"><h4>To Currency</h4></label>
+    <select name="currency" id="after">
+        <option value="vnd" name="currency">Vietnamdong</option>
+        <option value="usd" name="currency">DolaMy</option>
+    </select>
+    <br>
+    <br>
+    <button type="submit" onclick="final()">Convert</button>
+    <script>
+        function final() {
+            let value = document.getElementById("num").value
+            let value1 = document.getElementById("before").value
+            let value2 = document.getElementById("after").value
+            let result
+            if (value1 == value2) {
+                document.write("Tien da doi:" + value + ' ' + value2)
+
+            } else if
+            (value1 == "vnd") {
+                result = value * 23000
+                document.write("Tien da doi:" + result + ' ' + value2)
+            } else (result = value / 23000)
+            documment.write("Tien da doi:" +result+' '+value2)
+
+        }
+
+    </script>
+
+</form>
+</body>
+</html>

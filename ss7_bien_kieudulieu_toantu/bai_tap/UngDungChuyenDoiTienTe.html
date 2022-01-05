@@ -23,6 +23,7 @@
     <br>
     <br>
     <button type="submit" onclick="final()">Convert</button>
+    <br>
     <script>
         function final() {
             let value = document.getElementById("num").value
@@ -30,15 +31,18 @@
             let value2 = document.getElementById("after").value
             let result
             if (value1 == value2) {
-                document.write("Tien da doi:" + value + ' ' + value2)
+            result=value
+
 
             } else if
             (value1 == "vnd") {
                 result = value * 23000
-                document.write("Tien da doi:" + result + ' ' + value2)
-            } else (result = value / 23000)
-            documment.write("Tien da doi:" +result+' '+value2)
 
+            } else {
+                result = value / 23000
+
+            }
+            document.write("Tien da doi:" + result + ' ' + value2)
         }
 
     </script>

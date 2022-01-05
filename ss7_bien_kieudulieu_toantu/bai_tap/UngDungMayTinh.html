@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form action="">
+    <input type="text" id="manhinh">
+    <table>
+        <tr>
+            <td><button type="button" onclick="themChuoi('(')">(</button></td>
+            <td><button type="button" onclick="themChuoi(')')">)</button></td>
+            <td><button type="button" onclick="themChuoi('%')">%</button></td>
+            <td><button type="button" onclick="AC()">AC</button></td>
+        </tr>
+        <tr>
+            <td><button type="button" onclick="themChuoi('7')">7</button></td>
+            <td><button type="button" onclick="themChuoi('8')">8</button></td>
+            <td><button type="button" onclick="themChuoi('9')">9</button></td>
+            <td><button type="button" onclick="themChuoi('/')">&#247</button></td>
+        </tr>
+        <tr>
+            <td><button type="button" onclick="themChuoi('4')">4</button></td>
+            <td><button type="button" onclick="themChuoi('5')">5</button></td>
+            <td><button type="button" onclick="themChuoi('6')">6</button></td>
+            <td><button type="button" onclick="themChuoi('*')">x</button></td>
+        </tr>
+        <tr>
+            <td><button type="button" onclick="themChuoi('1')">1</button></td>
+            <td><button type="button" onclick="themChuoi('2')">2</button></td>
+            <td><button type="button" onclick="themChuoi('3')">3</button></td>
+            <td><button type="button" onclick="themChuoi('-')">-</button></td>
+        </tr>
+        <tr>
+            <td><button type="button" onclick="themChuoi('0')">0</button></td>
+            <td><button type="button" onclick="themChuoi('.')">.</button></td>
+            <td><button type="button" onclick="tinhToan()">=</button></td>
+            <td><button type="button" onclick="themChuoi('+')">+</button></td>
+        </tr>
+    </table>
+
+</form>
+</body>
+<script>
+    // luu lai input de thuc hien ham eval
+    let s=''
+    // them tat ca input vao chuoi s
+    function themChuoi(input) {
+        s=s+input
+        console.log(s)
+        document.getElementById('manhinh').value=s; // in ra man hinh chuoi
+    }
+    function tinhToan() {
+        let result =eval(s)
+        document.getElementById('manhinh').value=result;
+        s=result
+    }
+    // Xoa het nhap lai tu dau
+    function AC() {
+        document.getElementById('manhinh').value='';
+        s=''
+
+
+    }
+
+</script>
+</html>

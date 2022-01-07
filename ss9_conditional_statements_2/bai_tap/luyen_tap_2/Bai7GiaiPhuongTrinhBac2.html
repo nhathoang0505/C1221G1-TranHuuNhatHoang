@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--Bài 7: Giải phương trình bậc 2.-->
+<script>
+    let a = parseFloat(prompt("Nhập vào số A ở phương trình A.x^2+Bx+C=0"));
+    let b = parseFloat(prompt("Nhập vào số B ở phương trình A.x^2+Bx+C=0"));
+    let c = parseFloat(prompt("Nhập vào số C ở phương trình A.x^2+Bx+C=0"));
+    let x;
+    let x1;
+    let x2;
+    let delta;
+    if (a == 0) {
+        x = -c / b;
+        alert("Nghiệm của phương trình là" + x);
+    } else {
+        delta = b ^ 2 - 4 * a * c;
+        if (delta < 0) {
+            alert("Phương trình vô nghiệm");
+        } else if (delta == 0) {
+            alert("Phương trình có 1 nghiệm kép:" + ' ' + "x1 = x2 ="+( -b / (2 * a)));
+        } else {
+            x1 = (-b + Math.sqrt(delta)) / (2 * a);
+            x2 = (-b - Math.sqrt(delta)) / (2 * a);
+            alert("Phương trình có hai nghiệm:" + ' ' + x1 +' ' + x2 );
+        }
+    }
+</script>
+
+</body>
+</html>

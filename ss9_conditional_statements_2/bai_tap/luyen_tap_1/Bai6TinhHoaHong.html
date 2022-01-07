@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--Bài 6: Tính hoa hồng nhận được tuỳ theo mức doanh số bán hàng-->
+<script>
+    let tongDoanhthu = parseInt(prompt("Nhập vào tổng doanh thu"));
+    let tienHoahong;
+    let rate
+    if (tongDoanhthu >= 300000) {
+        rate=0.05
+    } else if (tongDoanhthu >= 150000) {
+        rate=0.02
+    } else {
+        rate=0
+    }
+    tienHoahong=tongDoanhthu*rate
+    alert("Tiền hoa hồng nhận được:"+' ' +tienHoahong)
+</script>
+
+
+</body>
+</html>

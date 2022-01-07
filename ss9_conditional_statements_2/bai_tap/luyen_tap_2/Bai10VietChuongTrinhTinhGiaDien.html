@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--Bài 10: Viết chương trình tính giá điện.-->
+<!--Bậc 1 (0 đến 50kWh): 1.678 đồng/kWh.-->
+<!--Bậc 2 (51 đến 100kWh): 1.734 đồng/kWh.-->
+<!--Bậc 3 (101 đến 200 kWh): 2.014 đồng/kWh.-->
+<!--Bậc 4 (201 đến 300 kWh): 2.536 đồng/kWh.-->
+<!--Bậc 5 (301 đến 400 kWh): 2.834 đồng/kWh.-->
+<!--Bậc 6 (401 kWh trở lên): 2.927 đồng/kWh.-->
+<script>
+    let soDien = parseFloat(prompt("Nhập vào số kWh đã dùng:"));
+    let tienTong;
+    if (soDien > 400) {
+        tienTong = 50 * 1.678 + 50 * 1.734 + 100 * 2.014 + 100 * 2.536 + 100 * 2.834 + (soDien - 400) * 2.927;
+    } else if (soDien > 300) {
+        tienTong = 50 * 1.678 + 50 * 1.734 + 100 * 2.014 + 100 * 2.536 + (soDien - 300) * 2.834;
+    } else if (soDien > 200) {
+        tienTong = 50 * 1.678 + 50 * 1.734 + 100 * 2.014 + (soDien - 200) * 2.536;
+    } else if (soDien > 100) {
+        tienTong = 50 * 1.678 + 50 * 1.734 + (soDien - 100) * 2.014;
+    } else if (soDien > 50) {
+        tienTong = 50 * 1.678 + (soDien - 50) * 1.734;
+    } else {
+        tienTong = soDien * 1.678;
+    }
+    alert("Tổng tiền phải trả:" +' '+ tienTong +' '+"VNĐ");
+
+</script>
+</body>
+</html>

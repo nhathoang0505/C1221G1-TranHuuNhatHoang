@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let soLuong = parseInt(prompt("Nhập giá trị từ bàn phím:"));
+    let count = 0; //số lượng số ngto đã tìm
+    let N = 2;
+    document.write(N + " là số nguyên tố");
+    document.write("<br>");
+    count++;
+    //Lặp đến khi tìm đủ số lượng số nguyên tố cần tìm
+    // count chỉ tăng khi tìm ra được 1 số nguyên tố
+    while (count < soLuong) {
+        //kiểm tra N có phải số ngto hay ko
+        for (let i = 2; i < N; i++) {
+            if (N % i == 0) {  //Nếu N chia hết cho i thì N ko phải số nguyên tố. Ko cần ktra thêm
+                break;
+            } else if (i == N - 1) {
+                document.write(N + " là số nguyên tố");
+                document.write('<br>');
+                count++;
+            }
+        }
+        N++;
+    }
+    // if (numbers < 2) {
+    //     document.write("ko phai");
+    // } else {
+    //     for (let i = 2; i < numbers; i++)
+    //         if (numbers % i == 0) {
+    //             document.write(numbers + "ko phai");
+    //             break;
+    //         } else if (i == numbers - 1) {
+    //             document.write(numbers + "nguyen to");
+    //         }
+    // }
+
+</script>
+</body>
+</html>

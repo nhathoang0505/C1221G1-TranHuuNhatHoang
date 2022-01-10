@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+
+    let nhietDo = parseFloat(prompt("Nhập vào thông tin nhiệt độ:"));
+    while (nhietDo > 100 || nhietDo < 20) {
+        if (nhietDo > 100) {
+            alert("Vui lòng giảm nhiệt độ:");
+            nhietDo = parseFloat(prompt("Vui lòng giảm nhiệt độ:"));
+        } else {
+            alert("Vui lòng tăng nhiệt độ");
+            nhietDo = parseFloat(prompt("Vui lòng tăng nhiệt độ:"));
+        }
+    }
+    alert("Thông tin nhiệt độ hiện tại: " + ' ' + nhietDo);
+
+
+</script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<script>
+    let count = 1;
+    let result = "";
+    while (count <= 100) {
+        if (count % 3 == 0 && count % 5 == 0) {
+            result = result + "fizzbuzz" + ",";
+        } else if (count % 3 == 0) {
+            result = result + "fizz" + ",";
+        } else if (count % 5 == 0) {
+            result = result + "buzz" + ",";
+        } else {
+            result = result + count + ",";
+        }
+        count++;
+    }
+    document.write(result);
+</script>
+</body>
+</html>

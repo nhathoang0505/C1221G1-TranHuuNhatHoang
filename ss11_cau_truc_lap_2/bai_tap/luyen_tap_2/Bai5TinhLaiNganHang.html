@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let tienGoc = parseInt(prompt("Nhập vào số tiền gốc:"));
+    let laiSuat = parseFloat(prompt("Nhập vào lãi suất hàng tháng:"));
+    let thangVay = parseInt(prompt("Nhập vào số tháng vay"));
+    let tienLai;
+    for (let i = 1; i <= thangVay; i++) {
+        tienLai = laiSuat * tienGoc;
+        tienGoc = tienGoc + tienLai;
+    }
+    alert("Tổng tiền phải trả: " + tienGoc);
+
+
+</script>
+</body>
+</html>

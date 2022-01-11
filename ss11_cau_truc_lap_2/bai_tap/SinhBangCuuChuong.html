@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p id="display"></p>
+<script>
+    // let n =prompt("nhâp số hàng");
+    // let m = prompt("nhập số côt")
+    let tableString = '<table border="1">';
+    for (let j = 1; j < 10; j++) {
+        tableString += '<tr>';
+        for (let i = 2; i < 10; i++) {
+            tableString += '<td>' + i+"x"+j+"="+(i * j) + '</td>';
+        }
+        tableString += '</tr>';
+    }
+    tableString += '</table>';
+    document.getElementById("display").innerHTML = tableString;
+</script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let x = 0;
+    let y = 1;
+    let soTiepTheo;
+    let soLuong = parseInt(prompt("Nhập vào số lượng muốn in:"));
+    document.write(x);
+    document.write('<br>');
+    document.write(y);
+    document.write('<br>');
+    let i = 2;
+    for (; i < soLuong; i++) {
+        soTiepTheo = x + y;
+        x = y;
+        y = soTiepTheo;
+        document.write(soTiepTheo);
+        document.write('<br>');
+
+    }
+</script>
+</body>
+</html>

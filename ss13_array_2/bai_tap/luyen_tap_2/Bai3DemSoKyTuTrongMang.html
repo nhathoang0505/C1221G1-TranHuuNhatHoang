@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--Bài 3: Viết một chương trình khai báo một mảng ký tự và kích thước của mảng. Chương trình này đếm số ký tự số trong mảng.-->
+<script>
+    let doDaiMang = parseInt(prompt("Nhập vào kích thước mảng"));
+    let arr = new Array(doDaiMang);
+    let count = 0;
+    for (let i = 0; i < arr.length; i++) {
+        arr[i] = parseInt(prompt('Nhập vào phần tử ở vị trí :' + i));
+        if (!isNaN(arr[i])) {
+            count = count + 1;
+        }
+    }
+    document.write('Số ký tự số trong mảng: ' + count);
+
+</script>
+</body>
+</html>

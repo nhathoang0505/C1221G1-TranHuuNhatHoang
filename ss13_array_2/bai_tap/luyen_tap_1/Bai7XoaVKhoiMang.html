@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let arr = new Array(10);
+    for (let i = 0; i < 10; i++) {
+        arr[i] = parseInt(prompt('Nhập vào số ở vị trí thứ ' + i));
+    }
+    let V = parseInt(prompt("Nhập vào số muốn kiểm tra:"));
+    for (let i = 0; i < arr.length; i++) {
+        if (V == arr[i]) {
+            for (let j = i; j < arr.length - 1; j++) {
+                arr[j] = arr[j + 1];
+            }
+            arr[arr.length - 1] = 0;
+            i--;
+        }
+    }
+    document.write(arr);
+
+</script>
+</body>
+</html>

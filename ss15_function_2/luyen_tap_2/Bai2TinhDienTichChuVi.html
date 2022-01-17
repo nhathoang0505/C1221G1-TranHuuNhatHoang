@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--Bài 2: Viết hàm tính diện tích, hàm tính chu vi hình tròn. Gọi hàm vừa xây dựng được-->
+<script>
+    let pi = 3.14;
+    let r = parseFloat(prompt("Nhập bán kính:"));
+    let dienTich = tinhDienTich(r);
+    let chuVi = tinhChuVi(r);
+
+    function tinhDienTich(banKinh) {
+        let dienTich = pi * banKinh * banKinh;
+        return dienTich;
+    }
+
+    alert("Diện tích: " + dienTich);
+
+    function tinhChuVi(banKinh) {
+        let chuVi = 2 * pi * banKinh;
+        return chuVi;
+    }
+
+    alert("Chu vi: " + chuVi);
+</script>
+
+</body>
+</html>

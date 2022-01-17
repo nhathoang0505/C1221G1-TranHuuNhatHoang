@@ -5,127 +5,151 @@
     <title>Title</title>
 </head>
 <body>
-<!--<input type="text" id="product" placeholder="Nhập tên sản phẩm">-->
-<!--<input type="button" value="Add New Product" onclick="addNewProduct()"><br>-->
-<!--<span> Số lương: </span><span id="soLuong">12</span>-->
-<!--<p id="ketQua"></p>-->
-<!--<script>-->
-<!--    // Khái niệm CRUD:-->
-<!--    // C: Create , R: Read, U: update, D: delete => chức năng cơ bản khi tạo web-->
-<!--    let listProduct = ["sam sung", "nokia", "iphone","sam sung2", "nokia2", "iphone2","GL"];-->
-<!--    let size =2;-->
-<!--    let pageCurent=1;-->
-<!--    display(listProduct,0,2);-->
-<!--    function display(data,start,end) {-->
-<!--        if (data.length==0){-->
-<!--            start=0;-->
-<!--            end=0;-->
-<!--        }else if (data.length==1){-->
-<!--            start=0;-->
-<!--            end=1;-->
-<!--        }-->
-<!--        let tableString = '<table border="1" style="border-collapse: collapse">\n' +-->
-<!--            '<tr>\n' +-->
-<!--            '<th>STT</th>\n' +-->
-<!--            '<th>Name</th>\n' +-->
-<!--            '<th>Edit</th>\n' +-->
-<!--            '<th>Delete</th>\n' +-->
-<!--            '</tr>';-->
-<!--        for (let i = start; i <end; i++) {-->
-<!--            tableString += ' <tr>\n' +-->
-<!--                '        <td>' + (i + 1) + '</td>\n' +-->
-<!--                '        <td>' + data[i] + '</td>\n' +-->
-<!--                '        <td><input type="button" value="Edit" onclick="editName(' + i + ')"></td>\n' +-->
-<!--                '        <td><input type="button" value="Delete" onclick="deleteProduct(' + i + ')"></td>\n' +-->
-<!--                '    </tr>';-->
-<!--        }-->
-<!--        tableString += "</table>";-->
-<!--        let totalPage = Math.ceil(data.length/size);-->
-<!--        let pageString ="";-->
-<!--        tableString+='<button id="pagePreview" onclick="nextPage(1)">Preview</button>';-->
-<!--        for (let i=0;i<totalPage;i++){-->
-<!--            pageString+='<button id="page'+i+'" onclick="changePage1('+i+')">'+(i+1)+'</button>';-->
-<!--        }-->
-<!--        tableString+=pageString;-->
-<!--        tableString+='<button id="pageNext" onclick="nextPage(2)" style="display: inline-block">Next</button>';-->
-<!--        document.getElementById("ketQua").innerHTML = tableString;-->
-<!--        document.getElementById("soLuong").innerHTML = data.length;-->
-
-<!--    }-->
-<!--    function nextPage(signal) {-->
-<!--        let totalPage= Math.ceil(listProduct.length/size);-->
-<!--        if (signal=="2"){-->
-<!--            pageCurent++;-->
-<!--        }else {-->
-<!--            pageCurent&#45;&#45;;-->
-<!--        }-->
-<!--        let start =pageCurent*size-->
-<!--        let end =(pageCurent+1)*size;-->
-<!--        alert(pageCurent +"-"+totalPage)-->
-<!--        if (pageCurent==0){-->
-<!--            document.getElementById("pagePreview").style.display = 'none';-->
-<!--        }else if (pageCurent==totalPage){-->
-<!--            alert("ok")-->
-<!--            document.getElementById("pageNext").style.display = 'none';-->
-<!--        }-->
-
-<!--        if (totalPage==pageCurent){-->
-<!--            end=listProduct.length;-->
-<!--            pageCurent&#45;&#45;;-->
-<!--        }-->
-<!--        display(listProduct,start,end);-->
-<!--        document.getElementById("page"+pageCurent).style.backgroundColor="blue";-->
-<!--    }-->
-<!--    function changePage1(pageNumber) {-->
-<!--        let totalPage= Math.ceil(listProduct.length/size);-->
-<!--        let start =pageNumber*size-->
-<!--        let end =(pageNumber+1)*size;-->
-<!--        if (totalPage-1==pageNumber){-->
-<!--            end=listProduct.length;-->
-<!--        }-->
-<!--        alert(start +"-"+end);-->
-<!--        display(listProduct,start,end);-->
-<!--        document.getElementById("page"+pageNumber).style.backgroundColor="blue";-->
-<!--        pageCurent=pageNumber;-->
-<!--    }-->
-
-<!--    function addNewProduct() {-->
-<!--        let productName = document.getElementById("product").value-->
-<!--        if (productName != "" && productName != null) {-->
-<!--            listProduct.push(productName);// thêm phần tử vào cuối mảng.-->
-<!--        } else {-->
-<!--            alert("Cần nhập thông tin sản phẩm")-->
-<!--        }-->
-<!--        document.getElementById("product").value = "";-->
-<!--        display(listProduct,(listProduct.length/size-1)*size,listProduct.length);-->
-<!--    }-->
-
-<!--    function editName(index) {-->
-<!--        let editName = prompt("nhập vào tên sản phẩ cần sửa");-->
-<!--        if (editName != "" && editName != null) {-->
-<!--            listProduct[index] = editName;-->
-<!--        }-->
-<!--        display(listProduct,0,2);-->
-<!--    }-->
-
-<!--    function deleteProduct(index) {-->
-<!--        let flag = confirm("Bạn có muốn xóa sản phẩm :" + listProduct[index]);-->
-<!--        // OK: true; => cancle => false;-->
-<!--        if (flag) {-->
-<!--            listProduct.splice(index, 1);// index, vị trí xóa,1: xóa 1 phần tử:-->
-<!--        } else {-->
-<!--            alert("bạn đã hủy, không muốn xóa sản phẩm: " + listProduct[index]);-->
-<!--        }-->
-<!--        display(listProduct,0,2);-->
-<!--    }-->
-<!--</script>-->
+<input type="text" id="product" placeholder="Nhập tên sản phẩm">
+<input type="button" value="Add New Product" onclick="addNewProduct()"><br>
+<span> Số lương: </span><span id="soLuong">12</span>
+<p id="ketQua"></p>
 <script>
-    function add(a, b) {
-        return a + b;
+    // Khái niệm CRUD:
+    // C: Create , R: Read, U: update, D: delete => chức năng cơ bản khi tạo web
+    let listProduct = ["sam sung", "nokia", "iphone","sam sung2", "nokia2", "iphone2","GL"];
+    let size =2;
+    let pageCurent=1;
+    display(listProduct,0,2);
+    function display(data,start,end) {
+        if (data.length==0){
+            start=0;
+            end=0;
+        }else if (data.length==1){
+            start=0;
+            end=1;
+        }
+        let tableString = '<table border="1" style="border-collapse: collapse">\n' +
+            '<tr>\n' +
+            '<th>STT</th>\n' +
+            '<th>Name</th>\n' +
+            '<th>Edit</th>\n' +
+            '<th>Delete</th>\n' +
+            '</tr>';
+        for (let i = start; i <end; i++) {
+            tableString += ' <tr>\n' +
+                '        <td>' + (i + 1) + '</td>\n' +
+                '        <td>' + data[i] + '</td>\n' +
+                '        <td><input type="button" value="Edit" onclick="editName(' + i + ')"></td>\n' +
+                '        <td><input type="button" value="Delete" onclick="deleteProduct(' + i + ')"></td>\n' +
+                '    </tr>';
+        }
+        tableString += "</table>";
+        let totalPage = Math.ceil(data.length/size);
+        let pageString ="";
+        tableString+='<button id="pagePreview" onclick="nextPage(1)">Preview</button>';
+        for (let i=0;i<totalPage;i++){
+            pageString+='<button id="page'+i+'" onclick="changePage1('+i+')">'+(i+1)+'</button>';
+        }
+        tableString+=pageString;
+        tableString+='<button id="pageNext" onclick="nextPage(2)" style="display: inline-block">Next</button>';
+        document.getElementById("ketQua").innerHTML = tableString;
+        document.getElementById("soLuong").innerHTML = data.length;
+
+    }
+    function nextPage(signal) {
+        let totalPage= Math.ceil(listProduct.length/size);
+        if (signal=="2"){
+            pageCurent++;
+        }else {
+            pageCurent--;
+        }
+        let start =pageCurent*size
+        let end =(pageCurent+1)*size;
+        alert(pageCurent +"-"+totalPage)
+        if (pageCurent==0){
+            document.getElementById("pagePreview").style.display = 'none';
+        }else if (pageCurent==totalPage){
+            alert("ok")
+            document.getElementById("pageNext").style.display = 'none';
+        }
+
+        if (totalPage==pageCurent){
+            end=listProduct.length;
+            pageCurent--;
+        }
+        display(listProduct,start,end);
+        document.getElementById("page"+pageCurent).style.backgroundColor="blue";
+    }
+    function changePage1(pageNumber) {
+        let totalPage= Math.ceil(listProduct.length/size);
+        let start =pageNumber*size
+        let end =(pageNumber+1)*size;
+        if (totalPage-1==pageNumber){
+            end=listProduct.length;
+        }
+        alert(start +"-"+end);
+        display(listProduct,start,end);
+        document.getElementById("page"+pageNumber).style.backgroundColor="blue";
+        pageCurent=pageNumber;
     }
 
-    var sum = add("4", "3");
-    console.log(sum)
+    function addNewProduct() {
+        let productName = document.getElementById("product").value
+        if (productName != "" && productName != null) {
+            listProduct.push(productName);// thêm phần tử vào cuối mảng.
+        } else {
+            alert("Cần nhập thông tin sản phẩm")
+        }
+        document.getElementById("product").value = "";
+        display(listProduct,(listProduct.length/size-1)*size,listProduct.length);
+    }
+
+    function editName(index) {
+        let editName = prompt("nhập vào tên sản phẩ cần sửa");
+        if (editName != "" && editName != null) {
+            listProduct[index] = editName;
+        }
+        display(listProduct,0,2);
+    }
+
+    function deleteProduct(index) {
+        let flag = confirm("Bạn có muốn xóa sản phẩm :" + listProduct[index]);
+        // OK: true; => cancle => false;
+        if (flag) {
+            listProduct.splice(index, 1);// index, vị trí xóa,1: xóa 1 phần tử:
+        } else {
+            alert("bạn đã hủy, không muốn xóa sản phẩm: " + listProduct[index]);
+        }
+        display(listProduct,0,2);
+    }
 </script>
+//kiem tra Nguyen Am Phu Am
+<!--<script>-->
+
+<!--    let keyWord = prompt('Nhập vào từ cần tìm:');-->
+<!--    let str = ['o', 'u', 'i', 'a', 'e'];-->
+<!--    // let flag = true;-->
+<!--    // for (let i = 0; i < str1.length; i++) {-->
+<!--    //     if (str1[i] == keyWord[0] || str2[i]==keyWord[0]) {-->
+<!--    //         flag = true;-->
+<!--    //         break;-->
+<!--    //     } else {-->
+<!--    //         flag = false;-->
+<!--    //     }-->
+<!--    // }-->
+<!--    // if (flag == true) {-->
+<!--    //     alert(keyWord + ' là nguyên âm');-->
+<!--    // } else {-->
+<!--    //     alert(keyWord + ' là phụ âm');-->
+<!--    // }-->
+<!--    let isNguyenAm = false;-->
+<!--    for (let i = 0; i < str.length; i++) {-->
+<!--        if (str[i] == keyWord[0].toLowerCase()) {-->
+<!--            isNguyenAm = true;-->
+<!--            break;-->
+<!--        }-->
+<!--    }console.log(isNguyenAm)-->
+<!--    if (isNguyenAm) {-->
+<!--        alert(keyWord + ' là nguyên âm');-->
+<!--    } else {-->
+<!--        alert(keyWord + ' là phụ âm');-->
+<!--    }-->
+<!--</script>-->
 </body>
 </html>

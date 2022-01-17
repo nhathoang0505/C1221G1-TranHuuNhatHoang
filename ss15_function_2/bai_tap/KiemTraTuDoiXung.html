@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function isPalindrome(s) {
+        let first = 0;
+        let last = s.length - 1;
+        let palindrome = true;
+        while (first < last) {
+            if (s[first] !== s[last]) {
+                palindrome = false;
+                break;
+            }
+            first++;
+            last--;
+        }
+        return palindrome;
+    }
+
+    let doiXung = isPalindrome("boob");
+    alert(doiXung);
+</script>
+</body>
+</html>

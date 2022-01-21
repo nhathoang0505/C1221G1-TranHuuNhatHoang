@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+
+    let keyWord = prompt('Nhập vào từ cần tìm:');
+    let str = ['o', 'u', 'i', 'a', 'e'];
+    let isNguyenAm = false;
+    for (let i = 0; i < str.length; i++) {
+        if (str[i] == keyWord[0].toLowerCase()) {
+            isNguyenAm = true;
+            break;
+        }
+    }
+    if (isNguyenAm) {
+        alert(keyWord + ' là nguyên âm');
+    } else {
+        alert(keyWord + ' là phụ âm');
+    }
+</script>
+</body>
+</html>

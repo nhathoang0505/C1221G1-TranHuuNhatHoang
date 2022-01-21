@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--Bài 5: Giả sử menu của chúng ta có các loại thức uống như sau:-->
+<!--Cafe-->
+<!--Cam vắt-->
+<!--Nước ép cà rốt-->
+<!--Nước ép cà chua-->
+<!--Nước lọc-->
+<!--Nước dừa-->
+<!--Viết một chương trình gọi thức uống đơn giản.-->
+<script>
+    let menuNum = [1, 2, 3, 4, 5, 6, 7];
+    let order;
+    let soLuong;
+    let tongTien = 0;
+    let price = [45, 50, 200, 150, 49, 20];
+    do {
+        order = parseInt(prompt("Menu Landmark 81 gồm: " + "\n" + "1.Tomahawk: 45$/kg " + "\n" + "2.Steak Thịt Vai Wagyu: 50$/(450Gr) " + "\n" + "3.Combo Bò Wagyu 5 Loại (Steak Nạc Vai, Mông Trên, Mông Đùi, Thịt Sườn, Mông Giữa): 200$ " + "\n" + "4.Combo Bò Wagyu Đặc Biệt (Steak Thăn Nội, Thăn Ngoại, Mông Trên): 150$ " + "\n" + "5.Tôm Hùm Sốt Bào Ngư: 49$ " + "\n" + "6.Phô Mai Camembert Nướng Sốt Mật Ong: 20$" + "\n" + "7.Vui lòng nhấn số 7 để thoát hoặc thanh toán"));
+        for (let i = 0; i < price.length; i++) {
+            if (order - 1 == i) {
+                soLuong = parseInt(prompt("Vui lòng nhập số lượng bạn muốn:"));
+                tongTien += soLuong * price[i];
+            }
+        }
+    } while (order !== 7);
+    alert("Tổng số tiền bạn phải thanh toán là: " + tongTien + "$ " + "\n" + "Xin cảm ơn quý khách!");
+
+</script>
+</body>
+</html>

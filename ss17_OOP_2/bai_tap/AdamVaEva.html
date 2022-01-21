@@ -23,6 +23,14 @@
         decrease() {
             this.weight--;
         }
+
+        isEmpty() {
+            if (this.weight == 0) {
+                return true;
+            } else {
+                return false;
+            }
+        }
     }
 
     class Human {
@@ -49,12 +57,17 @@
         }
 
         checkApple(Apple) {
-            Apple.getWeight();
+            if (Apple.isEmpty()) {
+                this.talk("Táo hết rồi");
+            }
+            // Apple.getWeight();
             console.log(Apple.getWeight());
         }
 
         eat(Apple) {
+
             if (Apple.getWeight() !== 0) {
+                console.log('eat');
                 this.weight++;
                 Apple.decrease();
             }
@@ -72,28 +85,45 @@
             this.weight = value;
         }
 
-        talk() {
-            document.write("I really wanna eat an apple");
+        talk(text) {
+            console.log(text);
         }
 
     }
 
-    let poisonApple = new Apple();
-    let adam = new Human('adam', 'male', 40);
-    let eva = new Human('eva', 'female', 30);
+    let tao = new Apple();
+    let adam = new Human('Adam', 'Nam', 40);
+    let eva = new Human('Eva', 'Nữ', 30);
     adam.getGender();
     adam.getName();
     adam.getWeight();
     eva.getName();
     eva.getGender();
     eva.getWeight();
-    adam.talk();
-    eva.talk();
-    adam.eat(poisonApple);
-    eva.eat(poisonApple);
-    console.log(adam);
-    console.log(eva);
-    console.log(poisonApple.getWeight());
+    adam.talk("Em có đói không?");
+    eva.talk("Em đói kinh khủng");
+    eva.eat(tao);
+    eva.talk("Em no rồi, anh làm miếng đi");
+    adam.eat(tao);
+    adam.eat(tao);
+    adam.eat(tao);
+    adam.eat(tao);
+    adam.eat(tao);
+    adam.eat(tao);
+    adam.eat(tao);
+    adam.eat(tao);
+    adam.eat(tao);
+    adam.eat(tao);
+    adam.eat(tao);
+    adam.eat(tao);
+    adam.eat(tao);
+    adam.eat(tao);
+    adam.eat(tao);
+    // console.log(adam);
+    // console.log(eva);
+    console.log(tao.getWeight());
+    adam.checkApple(tao);
+    console.log();
 </script>
 </body>
 </html>

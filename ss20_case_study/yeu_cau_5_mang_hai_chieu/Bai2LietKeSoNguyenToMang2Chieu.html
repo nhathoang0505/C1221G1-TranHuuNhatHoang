@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--Bài 2: Viết hàm liệt kê các số nguyên tố trong mảng 2 chiều, đếm các số nguyên tố có trong mảng đó.-->
+<script>
+    let m = parseInt(prompt("Nhập vào số m:"));
+    let n = parseInt(prompt("Nhập vào số n:"));
+    let arr = [];
+    let total = 0;
+    for (let i = 0; i < m; i++) {
+        arr[i] = [];
+        for (let j = 0; j < n; j++) {
+            arr[i][j] = Math.floor((Math.random() * 10) + 1);
+        }
+    }
+    let soLuong = arr.length;
+    let count = 0;
+    let N = 2;
+    document.write(N + " là số nguyên tố");
+    document.write("<br>");
+    count++;
+    while (count < soLuong) {
+        for (let i = 2; i < N; i++) {
+            if (N % i == 0) {
+                break;
+            } else if (i == N - 1) {
+                document.write(N + " là số nguyên tố");
+                document.write('<br>');
+                count++;
+            }
+        }
+        N++;
+    }
+</script>
+</body>
+</html>

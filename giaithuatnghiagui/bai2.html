@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--3.	Viết chương trình tính :-->
+<!--S=1+1/2+1/3+....+1/n-->
+<script>
+    let sum = 1;
+    let count = 3;
+    let n = parseInt(prompt("Nhap vao n: "));
+    for (let i = 0; i < n - 1; i++) {
+        sum += 1 / count;
+        count+=2;
+        console.log(sum);
+    }
+    document.write(sum);
+</script>
+</body>
+</html>

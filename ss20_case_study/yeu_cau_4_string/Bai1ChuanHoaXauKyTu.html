@@ -11,6 +11,7 @@ Và một hàm tìm từ dài nhất trong 1 xâu ký tự. Hàm main sử dụn
 <script>
     let str = 'tRuong    TaN   HAI';
     let newStr = [];
+    let sum=[]
     str = str.toLowerCase();
     for (let i = 0; i < str.length; i++) {
         if (str[i] == ' ' && str[i + 1] == ' ') {
@@ -23,10 +24,12 @@ Và một hàm tìm từ dài nhất trong 1 xâu ký tự. Hàm main sử dụn
     for (let i = 0; i < newStr.length; i++) {
         if (newStr[i] == ' ') {
             newStr[i + 1] = newStr[i + 1].toUpperCase();
+            sum.push(newStr[i+1])
         }
     }
     newStr = newStr.join("");
     alert(newStr);
+    alert(sum)
 
 </script>
 </body>

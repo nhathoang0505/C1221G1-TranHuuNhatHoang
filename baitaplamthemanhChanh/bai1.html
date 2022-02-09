@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let n;
+    let sum = 0;
+    let avg;
+    let count = 0;
+    do {
+        n = parseInt(prompt("Nhập vào n:"));
+    } while (n > 50);
+    let array = new Array(n);
+    for (let i = 0; i < n; i++) {
+        array[i] = parseInt(prompt("Nhập số nguyên ở vị trí: " + i));
+        if (i % 3 == 0 && array[i] % 5 == 0) {
+            sum += array[i];
+            console.log(sum);
+            count++;
+            console.log("count=" + count);
+        }
+    }
+    avg = sum / count;
+    console.log("avg= " + avg);
+    document.write(avg);
+</script>
+</body>
+</html>

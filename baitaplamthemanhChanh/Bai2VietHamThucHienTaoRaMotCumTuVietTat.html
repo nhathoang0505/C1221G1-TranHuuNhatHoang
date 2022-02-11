@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--Viết hàm có tham số truyền vào là một chuỗi các ký tự.Hàm thực hiện tạo ra một cụm từ viết tắt-->
+<script>
+    function vietTat(string) {
+        let summarize = [];
+        // let string = prompt("Nhập vào chuỗi các ký tự:");
+        string = string.trim();
+        let newString = [];
+        let count = 1;
+        for (let i = 0; i < string.length; i++) {
+            if (string[i] == ' ' && string[i + 1] == ' ') {
+                continue;
+            } else {
+                newString.push(string[i]);
+            }
+        }
+        summarize.push(newString[0].toUpperCase());
+        for (let i = 0; i < newString.length; i++) {
+            if (newString[i] == ' ') {
+                newString[i + 1] = newString[i + 1].toUpperCase();
+                summarize.push(newString[i + 1]);
+                count++;
+                console.log(summarize);
+                console.log("count= " + count);
+            }
+        }
+        if (count > 1) {
+            summarize = summarize.join("");
+            alert(newString);
+            alert(summarize);
+        } else {
+            alert("Chuỗi chỉ có 1 từ nên không cần viết tắc");
+        }
+    }
+    vietTat(prompt("Nhập vào chuỗi các ký tự:"))
+</script>
+</body>
+</html>
